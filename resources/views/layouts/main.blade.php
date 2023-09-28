@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome</title>
-    {{-- bootstrap css --}}
-    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    {{-- bootstrap icon --}}
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Fulfillment | {{ $title }}</title>
+    <link href="css/style.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/myStyle.css" rel="stylesheet" />
     <link rel="stylesheet" href="icons/bootstrap-icons.css">
+    <link rel="icon" type="image/x-icon" href="img/fulfillment.png">
 </head>
-<body>
-    @include('partials.sidebar')
-    <div class="">
-        @yield('container')
+
+<body class="sb-nav-fixed">
+    @include('partials.navbar')
+    <div id="layoutSidenav">
+        @include('partials.sidebar')
+        <div id="layoutSidenav_content" style="background-color: rgb(244, 244, 244);">
+            <main>
+                <div class="container-fluid px-4">
+                    @yield('container')
+                </div>
+            </main>
+        </div>
     </div>
-    {{-- bootstrap js --}}
-    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/simple-datatables.min.js" crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
 </body>
+
 </html>

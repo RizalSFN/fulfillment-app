@@ -1,0 +1,22 @@
+nav a:hover{
+    background-color: rgb(235, 235, 235);
+    color: black;
+}
+
+nav a:hover div i{
+    color: black;
+}
+
+.myActive{
+    background-color: rgb(235, 235, 235);
+}
+
+.myActiveIcon{
+    color: black;
+}
+
+.card-footer a:hover label i{
+    cursor: pointer;
+    transform: translateX(100px);
+    transition: ease 0.5s;
+}

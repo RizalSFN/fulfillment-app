@@ -1,30 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Dashboard - SB Admin</title>
-        <link href="css/style.min.css" rel="stylesheet" />
-        <link href="css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="icons/bootstrap-icons.css">
-    </head>
-    <body class="sb-nav-fixed">
-        @include('partials.navbar')
-        <div id="layoutSidenav">
-            @include('partials.sidebar')
-            <div id="layoutSidenav_content">
-                <main>
-                    <div class="container-fluid px-4">
-                        @yield('container')
+@extends('layouts.main')
+
+@section('container')
+    <h3 class="mt-2">Dashboard</h3>
+    <label>Laravel > {{ $title }}</label>
+    <hr class="bg-secondary">
+    <div class="row mt-4">
+        <div class="col-xl-4 col-md-4 mb-4">
+            <div class="card border-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                user</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">Jumlah User</div>
+                        </div>
+                        <div class="col-auto">
+                            <label class="fs-2 px-3">29</label>
+                        </div>
                     </div>
-                </main>
-                @include('partials.footer')
+                </div>
             </div>
         </div>
-        <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
-        <script src="js/simple-datatables.min.js" crossorigin="anonymous"></script>
-        <script src="js/datatables-simple-demo.js"></script>
-    </body>
-</html>
+    </div>
+@endsection

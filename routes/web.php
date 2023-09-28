@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/home', function () {
-    return view('dashboard');
-});
+Route::get('/use', [UserController::class, 'showAll'])->name('dashboard');
+Route::get('/dashboard', function () {
+    return view('dashboard', [
+        "title" => "dashboard"
+    ]);
+})->name('dashboard');
+Route::get('/users', function () {
+    return view('users', [
+        "title" => "users"
+    ]);
+})->name('users');
