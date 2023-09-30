@@ -1,9 +1,9 @@
-nav a:hover{
+.nav a:hover{
     background-color: rgb(235, 235, 235);
     color: black;
 }
 
-nav a:hover div i{
+.nav a:hover div i{
     color: black;
 }
 

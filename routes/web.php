@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,16 +16,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('login', [
+        "title" => "Login"
+    ]);
+})->name('utama');
+Route::post('/login', [LoginController::class, 'validasi'])->name('login');
 Route::get('/use', [UserController::class, 'showAll'])->name('dashboard');
 Route::get('/dashboard', function () {
     return view('dashboard', [
         "title" => "dashboard"
     ]);
 })->name('dashboard');
-Route::get('/users', function () {
-    return view('users', [
-        "title" => "users"
-    ]);
-})->name('users');
+Route::get('/users', [UserController::class, 'showAll'])->name('users');
