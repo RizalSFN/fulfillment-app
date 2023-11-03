@@ -12,7 +12,11 @@
                         <div class="card-body">
                             <form class="pb-4" method="POST" action="{{ route('login') }}">
                                 @if (session('error'))
-                                    <div class="alert alert-danger">{{ session('error') }}</div>
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        <strong>{{ session('error') }}</strong>
+                                        <button type="button" class="btn-close" style="box-shadow: inset 0 0 0 #ddd;"
+                                            data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
                                 @endif
                                 @csrf
                                 <div class="form-floating mb-3">
@@ -34,7 +38,7 @@
                     </div>
                     <label class="d-flex justify-content-center mt-2">Made with <i
                             class="bi bi-heart-fill mx-1 text-danger"></i> by
-                        Fulfillment</label>
+                        Gueh</label>
                 </div>
             </div>
         </div>
